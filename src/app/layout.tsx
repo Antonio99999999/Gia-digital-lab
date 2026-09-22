@@ -18,10 +18,27 @@ const jakarta = Plus_Jakarta_Sans({
   variable: "--font-jakarta",
 });
 
+const title = "Gia Digital Lab — Social media management a Torino";
+const description =
+  "Gabi e Giulia, social media manager freelance a Torino. Strategia social, creazione contenuti e copertura eventi per raccontare chi sei, sui social.";
+
 export const metadata: Metadata = {
-  title: "Gia Digital Lab — Social media management a Torino",
-  description:
-    "Gabi e Giulia, social media manager freelance a Torino. Strategia social, creazione contenuti e copertura eventi per raccontare chi sei, sui social.",
+  metadataBase: new URL("https://gia-digital-lab.vercel.app"),
+  title,
+  description,
+  openGraph: {
+    title,
+    description,
+    url: "https://gia-digital-lab.vercel.app",
+    siteName: "Gia Digital Lab",
+    locale: "it_IT",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
